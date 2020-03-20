@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Where the Wild Things Are</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Chango" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+
+</head>
+
+<body>
+	<nav class="universal-nav">
+		<ul>
+			<li class="selected">
+				<a href="index.html">
+					HOME
+					<h1>H </h1>
+				</a>
+			</li>
+			<li>
+				<a href="part_one.html">
+					PART
+					<h1>1 </h1>
+				</a>
+			</li>
+			<li>
+				<a href="part_two.html">
+					PART
+					<h1>2 </h1>
+				</a>
+			</li>
+			<li>
+				<a href="part_three.html">
+					PART
+					<h1>3 </h1>
+				</a>
+			</li>
+			<li>
+				<a href="part_four.html">
+					PART
+					<h1>4 </h1>
+				</a>
+			</li>
+			<li>
+				<a href="part_five.html">
+					PART
+					<h1>5 </h1>
+				</a>
+			</li>
+			<li>
+				<a href="part_six.html">
+					PART
+					<h1>6 </h1>
+				</a>
+			</li>
+			<li>
+				<a href="part_seven.html">
+					PART
+					<h1>7 </h1>
+				</a>
+			</li>
+
+		</ul>
+	</nav>
+	<header>
+		<h1> Where the Wild Things Are </h1>
+		<h4> By Maurice Sendak </h4>
+	</header>
+
+	<div id="drag-content">
+		<figure id="costume">
+			<img src="images/costume.gif" alt="Wolf Suit">
+		</figure>
+
+		<section id="name-in-story-form">
+			<form method="get" action="index.html">
+				<fieldset>
+					<legend>
+						Personalize your journey!
+					</legend>
+					<div id="parent-flex">
+						<div class="form-item">
+							<label for="name">Type for first Name*: </label>
+							<div class="form-element">
+								<input type="text" name="first-name" id="name"
+									placeholder="First name (e.g., 'Sally')" />
+							</div>
+						</div>
+						<div class="form-item">
+							<label for="monster">Type for most feared monster's Name*: </label>
+							<div class="form-element">
+								<input type="text" name="monster-name" id="monster"
+									placeholder="Monsters name (e.g., 'Gremlin')" />
+							</div>
+						</div>
+
+						<div class="form-item">
+							<label for="male">Enter gender*: </label>
+							<div class="form-element">
+								<input type="radio" name="gender" id="male" value="male"> Male<br>
+								<input type="radio" name="gender" id="female" value="female"> Female<br>
+							</div>
+						</div>
+						<button type="submit">Submit</button>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+	</div>
+
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

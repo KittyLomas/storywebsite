@@ -1,0 +1,1010 @@
+/* The following style is applied for mobile AND desktop 
+ * view, unless the desktop is overrided in the media query 
+ * below 
+ */
+ 
+/* Style for multiple pages */	
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Sue Ellen Francisco', cursive;
+	font-size: 10px;
+	background-image: URL("images/fresh_snow.png");
+	height: 100px;
+
+}
+
+
+.universal-nav {
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height: 45px;
+	margin-left: 3em;
+	margin-right: 3em;
+	z-index: 9999;
+}
+
+.universal-nav ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.universal-nav li {
+	padding-top: 0.5em;
+	min-width: 9%;
+	max-height: 3.5em;
+	padding-bottom: 1%;
+	border: 1px solid black;
+	border:solid 2px black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	background-color: white;
+	
+}
+
+.universal-nav a {
+	color: black;
+	text-decoration: none;
+}
+
+.universal-nav h1 {
+	font-family: 'Chango', cursive;
+}
+
+.universal-nav li.selected {
+	background-color: black;
+}
+
+.universal-nav li.selected a {
+	color: white;
+}
+
+.universal-nav li:hover {
+	border:solid 3px black;
+	box-shadow:8px 8px 4px -6px hsla(0,0%,0%,.3);
+}
+
+.novel-content, blockquote{
+	font-size: 1.2em;
+}
+
+#part-one, #part-two, #part-three, .content, #part-four, #part-five, #part-six, #part-seven {
+	margin-top: 53px;
+	padding-top: 3em;
+	padding-left: 3em;
+}
+
+ .question {
+	display: inline-block;
+	border:solid 2px black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	width: 20%;
+	font-family: 'Amatic SC', cursive;
+	max-height: 100px;
+	min-height: 100px;
+	text-align: center;
+	position: absolute;
+	padding: 1em;
+	color: white;
+	background-color: black;
+	margin-top: 5%;
+}
+
+.error {
+	color: red;
+	font-weight: 700;
+}
+
+/* Style for incorrect/correct fact pages for older
+   web browsers
+   */
+.go-back {
+	display: inline-block;
+	position: relative;
+	padding: 1em;
+}
+
+.go-back  img {
+	transform: rotate(180deg);
+	width: 100px;
+}
+
+.go-back h2 {
+	display: none;
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	color: black;
+}
+
+.go-back h2 a {
+	text-decoration: none;
+}
+
+.content {
+	border: 1px solid black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+
+/*  Style for incorrect/correct fact pop-up
+    for newer web browsers
+*/
+
+.fact_container {
+	display: inline-block;
+	width: 40%;
+	position: absolute;
+	position: fixed;
+	top: 20%;
+	left: 30%;
+}
+
+.fun-fact-popup-correct, .fun-fact-popup-incorrect {
+	position: absolute;
+	top: 0;
+	background: rgba(0,0,0,0.75);
+	color: white;
+	border: 7px solid black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	visibility: hidden;
+}
+	
+ .exit {
+	position: absolute;
+	top: 0;
+	right: 20px;	
+}
+
+.fun-fact-popup-correct a, .fun-fact-popup-incorrect a{
+	text-decoration: none;
+	color: white;
+}
+
+.fun-fact-popup-correct a:hover, .fun-fact-popup-incorrect a:hover{
+	font-weight: 700;
+}
+
+body.show-fun-fact-popup-correct .fun-fact-popup-correct {
+	visibility: visible;
+	opacity: 1;
+}
+
+body.show-fun-fact-popup-incorrect .fun-fact-popup-incorrect {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+/* Style for index.html */
+header {
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	margin-top: 53px;
+	padding: 1.5em;
+}
+
+
+header h4 {
+	font-size: 2em;
+}
+
+header h1 {
+	font-size: 5em;
+	font-weight: 400;
+}
+
+#drag-content {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-around;
+
+}
+
+#drag-content #costume {
+	width: auto;
+	display: block;
+}
+
+#drag-content #costume img {
+	width: 50%;
+}
+
+#drag-content #name-in-story-form {
+	font-size: 2em;
+
+}
+
+#drag-content #name-in-story-form legend {
+	font-size: 1.2em;
+	border: 1px solid black;
+	border:solid 2px black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	background-color: black;
+	color: white;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+#drag-content #name-in-story-form .form-item .form-element input[type="text"]::placeholder{
+	font-family: 'Sue Ellen Francisco', cursive;
+}
+
+#drag-content #name-in-story-form fieldset {
+	border: 1px solid black;
+	border:solid 2px black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	background-color: white;
+}
+
+.two-options {
+	width: auto;
+	display: inline-flex;
+	flex-direction: row;
+	position: absolute;
+	right: 0;
+	width: 40%;
+}
+
+.two-options img{
+	width: 100%;
+}
+
+/* Style for part_one.html */
+#part-one {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#part-one #text {
+	width: 100%;
+}
+
+#part-one aside {
+	display: none;
+}
+
+
+#part-one #quotes {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+#part-one #quotes .quote {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	min-width: 100px;
+	min-height: 60px;
+	padding-left: 50px;
+	padding-top: 35px;
+}
+
+#part-one #quotes .quote:nth-child(1) {
+	background-image: URL("images/bubble1.gif");
+}
+
+#part-one #quotes .quote:nth-child(2) {
+	background-image: URL("images/bubble2.gif");
+}
+
+
+#part-one #quotes .quote:hover {
+	animation: quiver 0.6s cubic-bezier(.36,.07,.19,.97) 0s 1 normal;
+}
+
+
+#part-one img {
+	width: 100%;
+}
+
+/* Style for part_two.html */
+#part-two #trees {
+	visibility: hidden;
+}
+
+#part-two {
+	max-height: 400px;
+}
+
+#part-two .two-options {
+	top: 30%;
+	right: 5%;
+}
+
+.two-options #snake, .two-options #frog  {
+	width: 180px;
+}
+
+.two-options #snake:hover, .two-options #frog:hover {
+	width: 200px;
+}
+
+
+/* Style for part_three.html */
+#part-three .two-options {
+	right: 1em;
+}
+
+.two-options #boat_two {
+	width: 40%;
+	animation: float 5s ease-in-out infinite;
+	right: 0;
+	position: absolute;
+}
+	
+.two-options #boat_one  {
+	width: 40%;
+	animation: float 6s ease-in-out infinite;
+}
+
+.two-options #boat_one:hover, .two-options #boat_two:hover   {
+	width: 45%;
+}
+
+
+/* Style for part_four.html */
+#part-four .question {
+	left: 68%;
+	top: 25%;
+}
+
+#part-four #wild-things {
+	min-width: 200px;
+	display: inline-block;
+	position: relative;
+	
+}
+
+#part-four #wild-things img {
+	width: 30%;
+	position: absolute;
+}
+
+#part-four #wild-things img:first-child {
+	width: 100%;
+}
+
+#part-four #wild-things img:nth-child(2) {
+	top: 47px;
+	left: 7px;
+}
+
+body.no_js #part-four #wild-things img:nth-child(2):hover + img {
+	animation: mobile_first_crown 2s linear 0s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+#part-four #wild-things img:nth-child(4) {
+	top: 20px;
+	left: 55px;
+}
+
+body.no_js#part-four #wild-things img:nth-child(4):hover +  img {
+	animation: mobile_second_crown 2s linear 0s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+body.no_js #part-four #wild-things img:nth-child(6):hover + img {
+	animation: mobile_last_crown 2s linear 0s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+#part-four #wild-things img:nth-child(6) {
+	top: 43px;
+	left: 125px;
+}
+
+#part-four {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+	
+#part-four #wild-things img:nth-child(3), 
+#part-four #wild-things img:nth-child(5), 
+#part-four #wild-things img:nth-child(7) {
+	height: 50px;
+	width: 70px;
+	position: absolute;
+}
+
+#part-four #wild-things img:nth-child(3) {
+	left: 0px;
+	top: -150px;
+
+}
+
+#part-four #wild-things img:nth-child(5) {
+	top: -150px;
+	left: 55px;
+} 
+
+#part-four #wild-things img:nth-child(7) {
+	top: -150px;
+	left: 125px;
+}
+
+/* Style for part_five.html */ 
+#part-five {
+	display: flex;
+	flex-direction: column;
+}
+
+#four_monsters {
+	min-width: 40%;
+	max-width: 40%;
+	padding: 1em;
+}
+
+#four_monsters img {
+	width: 100%;
+}
+
+
+/* Style for part_six.html */
+#part-six {
+	position: relative;
+}
+
+.two-options #shark {
+	width: 100%;
+	animation: float 5s ease-in-out infinite;
+}
+	
+.two-options #shark:hover {
+	width: 110%;
+}
+
+.two-options #fish  {
+	width: 100%;
+	animation: float 6s ease-in-out infinite;
+}
+
+.two-options #fish:hover {
+	width: 110%;
+}
+
+/* Style for part_seven.html */
+.food {
+	width: 70%;
+}
+
+.food img {
+	width: 100%;
+}
+
+/* Keyframe animations */
+@keyframes quiver {
+	5% {
+		transform: translate3d(1px, 0px, 0px);
+	}
+	
+	25% {
+		transform: translate3d(-1px, 0px, 0px);
+
+	}
+	
+	30% {
+		transform: translate3d(2px, 0px, 0px);
+		
+	}
+	
+	45% {
+		transform: translate3d(-2px, 0px, 0px);
+		
+	}
+	
+	60% {
+		transform: translate3d(3px, 0px, 0px);
+		
+	}
+	
+	85% {
+		transform: translate3d(-3px, 0px, 0px);
+		
+	}
+	
+	100% {
+		transform: translate3d(4px, 0px, 0px);
+		
+	}
+}
+
+@keyframes grow_grew {
+	from {
+		font-size: 1em;
+	} 
+	to {
+		font-size: 2em;
+	}
+}
+
+@keyframes mobile_last_crown{
+    from {
+		top: -150px;
+		}
+    to {
+		
+		top: -3px;
+		transform: rotateZ(20deg);
+		}
+}
+
+@keyframes mobile_second_crown{
+    from {
+		top: -150px;
+		}
+    to {
+		
+		top: -25px;
+		transform: rotateZ(20deg);
+		}
+}
+
+@keyframes mobile_first_crown{
+    from {
+		top: -150px;
+		}
+    to {
+		
+		top: -3px;
+		transform: rotateZ(-10deg);
+		}
+}
+
+@keyframes desktop_last_crown{
+    from {
+		top: -300px;
+		}
+    to {
+		
+		top: -10px;
+		transform: rotateZ(15deg);
+		}
+}
+
+@keyframes desktop_second_crown{
+    from {
+		top: -300px;
+		}
+		
+    to {
+		top: -80px;
+		transform: rotateZ(15deg);
+		}
+}
+
+@keyframes desktop_first_crown{
+    from {
+		top: -300px;
+		}
+    to {
+		
+		top: 0px;
+		transform: rotateZ(-20deg);
+		}
+}
+
+@keyframes mymove {
+    from {
+		bottom: -600px;
+		}
+
+    to {
+		bottom: -80px;
+		}
+}
+
+@keyframes mymoveshort {
+    from {
+		bottom: -600px;
+		}
+    to {
+		bottom: -120px;
+		}
+}
+
+@keyframes rotateleft {
+	from {
+		transform: translate3d(0, 0, 0);
+		bottom: -120px;
+		left: 0;
+	}
+	to {
+		transform: rotateZ(-90deg);
+		bottom: -350px;
+		left: -100px;
+	}
+}
+
+@keyframes rotateright {
+	from {
+		transform: translate3d(0, 0, 0);
+		right: -100px;
+		bottom: -80px;
+	}
+	to {
+		transform: rotateZ(30deg);
+		right: -250px;
+		bottom: -100px;
+	}
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+/* The following style is applied for desktop only  */
+ 	
+@media only screen and (min-width: 650px) {
+
+/* Style for multiple pages */	
+body {
+	font-size: 18px;
+}
+
+.universal-nav ul {
+	padding-top: 6px;
+	padding-bottom: 8px;
+	justify-content: space-between;
+}
+
+.universal-nav li {
+	width: 45px;
+}
+
+.universal-nav li a {
+	font-size: 1em;
+}
+
+.fact {
+	width: 60%;
+}
+
+.two-options {
+	flex-direction: column;
+	top: 150px;
+}
+
+/* Style for incorrect/correct fact pages for older
+   web browsers
+*/
+.content {
+	margin-top: 100px;
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+/* Style for index.html */
+header h1 {
+	font-size: 8em;
+}
+
+#drag-content {
+	flex-direction: row;
+}
+
+#drag-content #name-in-story-form {
+	font-size: 1em;
+	width: 50%;
+}
+
+button[type="submit"] {
+	font-family: 'Sue Ellen Francisco', cursive;
+	background-color: white;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	border:solid 1px black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	background-color: black;
+	color: white;
+}
+
+button[type="submit"]:hover {
+	font-weight: 700;
+}
+
+/* Style for part_one.html */
+.novel-content, blockquote{
+	font-size: 1.8em;
+}
+
+#part-one #quotes .quote {
+	min-width: 200px;
+	min-height: 100px;
+	padding-left: 40px;
+	padding-top: 70px;
+	font-size: 0.5em;
+}
+
+#part-one #text {
+	width: 45%;
+
+}
+
+#part-one aside {
+	display: block;
+	width: 45%;
+}
+
+#part-one aside img {
+	width: 80%;
+}
+
+.quote:nth-child(1) {
+	align-self: flex-start;
+}
+
+.quote:nth-child(2) {
+	align-self:  flex-end;
+}
+
+
+#part-one #quotes {
+	width: 100%;
+}
+
+
+#part-one #quotes .quote {
+	position: relative;
+}
+
+#part-one #quotes .quote blockquote {
+	position: absolute;
+	left:  90px;
+	font-size: 2.5em;
+	top: 40px;
+	font-weight: 700;
+}
+
+#part-one #quotes .quote:nth-child(1) blockquote {
+	transform: rotateZ(-20deg);
+}
+
+#part-one #quotes .quote:nth-child(2) blockquote {
+	transform: rotateZ(20deg);
+	transform: rotateZ(20deg);
+}
+
+
+/* Style for part_two.html */
+#grow_one {
+	animation: grow_grew 5s cubic-bezier(.36,.07,.19,.97) 2s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+#grow_two {
+	animation: grow_grew 4s cubic-bezier(.36,.07,.19,.97) 3s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+#part-two {
+	height: 100%;
+}
+
+
+#part-two #trees {
+	display: inline-block;
+	position: fixed;
+	right: 0;
+	bottom: 0px;
+	min-width: 40%;
+	min-height: 400px;
+}
+
+#part-two .two-options {
+	right: -14%;
+	bottom: 0;
+}
+
+#second-tree  img, #first-tree img {
+	width: 100%;
+}
+
+#second-tree {
+	position: absolute;
+	bottom: -600px;
+	right: -100px;
+	width: 90%;
+}
+
+#first-tree {
+	position: absolute;
+	bottom: -600px;
+	left: 0;
+	width: 90%;
+
+}
+
+.longtree {
+	animation: mymove 5s cubic-bezier(.36,.07,.19,.97) 2s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+.shorttree {
+	animation: mymoveshort 4s cubic-bezier(.36,.07,.19,.97) 3s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+.showanimalsleft {
+	animation: rotateleft 2s cubic-bezier(.36,.07,.19,.97) 0s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+.showanimalsright {
+	animation: rotateright 2s cubic-bezier(.36,.07,.19,.97) 0s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+/* Style for part_three.html */
+#part-three .two-options {
+	top: 40%;
+}
+
+.two-options #boat_two {
+	width: 50%;
+}
+	
+.two-options #boat_one  {
+	width: 50%;
+}
+
+.two-options #boat_one:hover, .two-options #boat_two:hover  { 
+	width: 55%;
+}
+
+/* Style for part_four.html */
+#part-four {
+	font-size: 0.9em;
+}
+
+#part-four #wild-things {
+	min-width: 600px;
+	margin-top: 50px;
+}
+
+#part-four #wild-things img:nth-child(2) {
+	top: 140px;
+	left: 20px;
+}
+
+#part-four #wild-things img:nth-child(4) {
+	top: 50px;
+	left: 170px;
+}
+
+#part-four #wild-things img:nth-child(6) {
+	top: 120px;
+	left: 380px;
+}
+
+#part-four .question {
+	left: 65%;
+	top: 60%;
+}
+
+#part-four #crowns {
+	width: 600px;
+}
+
+#part-four #wild-things img:nth-child(3), 
+#part-four #wild-things img:nth-child(5), 
+#part-four #wild-things img:nth-child(7) {
+	height: 150px;
+	width: 180px;
+	position: absolute;
+	top: -300px;
+}
+
+#part-four #wild-things img:nth-child(3) {
+	left: 0px;
+}
+
+#part-four #wild-things img:nth-child(5) {
+	left: 170px;
+} 
+
+#part-four #wild-things img:nth-child(7) {
+
+	left: 380px;
+}
+
+body.no_js #part-four #wild-things img:nth-child(2):hover +  img {
+	animation: desktop_first_crown 2s linear 0s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+body.no_js #part-four #wild-things img:nth-child(4):hover +  img {
+	animation: desktop_second_crown 2s linear 0s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+body.no_js #part-four #wild-things img:nth-child(6):hover + img {
+	animation: desktop_last_crown 2s linear 0s 1 normal;
+	animation-fill-mode: forwards;
+}
+
+
+/* Style for part_five.html */
+#part-five {
+	flex-direction: row;
+}
+
+#four_monsters {
+	width: 100%;
+	padding: 1em;
+}
+
+/* Style for part_six.html */
+.two-options #shark, .two-options #fish, .two-options #meal_one, .two-options #meal_two {
+	width: 50%;
+	margin-left: 10%;
+}
+
+.two-options #shark:hover, .two-options  #fish:hover, .two-options #meal_one:hover, .two-options #meal_two:hover {
+	width: 55%;
+}
+
+/* Style for part_seven.html */
+.food {
+	width: 40%;
+}
+
+/* Style for incorrect/correct fact pages for older
+   web browsers
+*/
+.go-back {
+	display: inline-block;
+	position: relative;
+}
+
+.go-back  img {
+	transform: rotate(180deg);
+	width: 200px;
+}
+
+.go-back h2 {
+	display: inline-block;
+	position: absolute;
+	right: 12px;
+	top: 85px;
+	color: black;
+}
+
+.go-back h2 a {
+	text-decoration: none;
+}
+
+}
+
